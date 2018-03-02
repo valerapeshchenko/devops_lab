@@ -1,0 +1,15 @@
+sudo yum install -y gcc gcc-c++ make git patch openssl-devel zlib-devel readline-devel sqlite-devel bzip2-devel
+#	git clone git://github.com/yyuu/pyenv.git ~/.pyenv
+#	export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+pyenv install 3.6.4
+pyenv install 2.7.8
+#	export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv
+pyenv global 3.6.4
+pip install virtualenv
+eval "$(pyenv init -)"
+pyenv virtualenv v1
+pyenv global 2.7.8
+pyenv virtualenv v2
