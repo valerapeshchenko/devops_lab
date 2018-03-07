@@ -95,7 +95,7 @@ class SysSnapshot(object):
 					with open('json_myClass.json', 'a') as outfile:
 					    json.dump(d, outfile, sort_keys = True, indent = 4, ensure_ascii = False)
 					    outfile.write("\n");
-					time.sleep(int(self.interval)*0.5);
+					time.sleep(int(self.interval)*300);
 					print("opa!");
 					self.counter += 1;
 			else:
@@ -131,7 +131,7 @@ class SysSnapshot(object):
 					f.write(string20);
 					f.write(string21);
 					f.write(string22);
-					time.sleep(int(self.interval)*0.5);
+					time.sleep(int(self.interval)*300);
 					print("opa!");
 					self.counter += 1;
 		else:
