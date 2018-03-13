@@ -64,7 +64,6 @@ def general_function():
     output = p.stdout.read().decode('utf-8')
     pip_string = re.findall(r'[^\s]', output)
     pip_location = ''.join(pip_string)
-    print(pip_location)
     d["Pip location"] = pip_location
 
     d["PYTHONPATH"] = str((os.environ['PATH'].split(os.pathsep))[0])
@@ -99,7 +98,7 @@ def json_file():
 
 def yaml_file():
     d = general_function()
-    with open('json_pyenv.yaml', 'w') as outfile:
+    with open('yaml_pyenv.yaml', 'w') as outfile:
         yaml.dump(d, outfile, default_flow_style=False, allow_unicode=True)
         outfile.write("\n")
 
